@@ -1,9 +1,12 @@
 # Java ONE
 
-### Para mas detalles del programa 
-[Oracle ONE Prep](https://github.com/ferthelet/one)
+#### Java versions explained
++ [Guide to Java Versions and Features](https://dzone.com/articles/a-guide-to-java-versions-and-features)
 
-[Markdown Cheat Sheet](https://commonmark.org/help/)
+### Para mas detalles del programa 
++ [Oracle ONE Prep](https://github.com/ferthelet/one)
+
++ [Markdown Cheat Sheet](https://commonmark.org/help/)
 
 ### Video intro
 + [La magia detras de Java](https://www.youtube.com/watch?v=GrEO8nZzyZM)
