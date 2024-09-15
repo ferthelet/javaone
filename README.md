@@ -3,7 +3,7 @@
 ### Para mas detalles del programa 
 [Oracle ONE Prep](https://github.com/ferthelet/one)
 
-[Markdown Cheat Sheet target="_blank"](https://commonmark.org/help/) 
+[Markdown Cheat Sheet](https://commonmark.org/help/){:target="_blank"}
 
 ### Video intro
 + [La magia detras de Java](https://www.youtube.com/watch?v=GrEO8nZzyZM)
