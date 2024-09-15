@@ -17,7 +17,7 @@
 + resulta en `HolaMundo.class`
 + `java HolaMundo`
 + `vi HolaMundo.class`
- + para ver hex `:%!xxd` para salir `:%!xxd -r` o `:q!`
+  + para ver hex `:%!xxd` para salir `:%!xxd -r` o `:q!`
 + herramienta de conversion de java `javap -c HolaMundo.class`
 
 #### Opcodes de Java
