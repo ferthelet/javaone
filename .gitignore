@@ -1,8 +1,36 @@
 # Compiled class file
 *.class
 
+# Package files
+*.jar
+*.war
+*.ear
+
+# IDE-specific files
+.idea/
+*.iml
+.classpath
+.project
+
+# Maven build output
+target/
+
+# Gradle build output
+build/
+
+# Generated documentation
+javadoc/
+
 # Log file
 *.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.swp
+*~
 
 # BlueJ files
 *.ctxt
