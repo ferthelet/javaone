@@ -13,8 +13,8 @@ public class App {
         String sinopsis = """
                 Matrix es una paradoja
                 La mejor pelicula del fin del milenio
-                Fue lanzada en:
-                """ + fechaDeLanzamiento;
+                Fue lanzada en: %s
+                """.formatted(fechaDeLanzamiento);
         System.out.println(sinopsis);
 
 
