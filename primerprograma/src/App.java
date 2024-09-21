@@ -17,6 +17,8 @@ public class App {
                 """.formatted(fechaDeLanzamiento);
         System.out.println(sinopsis);
 
+        int clasificacion = (int) Math.round(media / 2);
+        System.out.println(clasificacion);
 
     }
 }
