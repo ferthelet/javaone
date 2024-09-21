@@ -17,6 +17,10 @@ public class App {
 
         // Display the result
         System.out.println("Los grados Fahrenheit son: " + fahrenheit);
+
+        // Rounding to int
+        int fahrenheitInt = (int) fahrenheit;
+        System.out.println("Los grados Fahrenheit en entero es: " + fahrenheitInt);
         
         // Close the scanner
         sc.close();
