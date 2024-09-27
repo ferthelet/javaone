@@ -19,8 +19,7 @@ public class JuegoAdivinanzas {
         for (int intento = 1; intento <= intentosMaximos; intento++) {
             System.out.print("\nIntento " + intento + ": Ingresa tu número: ");
             
-            int adivinanza;
-            adivinanza = Integer.parseInt(scanner.nextLine());
+            int adivinanza = Integer.parseInt(scanner.nextLine());
 
             if (adivinanza < 0 || adivinanza > 100) {
                 System.out.println("El número debe estar entre 0 y 100.");
@@ -29,7 +28,7 @@ public class JuegoAdivinanzas {
             }
 
             if (adivinanza == numeroSecreto) {
-                System.out.println("¡Felicidades! Has adivinado el número en " + intento + " intentos.");
+                System.out.println("¡Felicidades! Adivinaste el número en " + intento + " intentos.");
                 return;
             }
 
@@ -39,6 +38,9 @@ public class JuegoAdivinanzas {
                 System.out.println("El número es menor.");
             }
         }
+
+        System.out.println("\n¡Se acabaron los intentos! \nEl número secreto era " + numeroSecreto + ".");
+        scanner.close();
 
     }
 }
