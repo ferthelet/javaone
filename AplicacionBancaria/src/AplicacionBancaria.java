@@ -41,4 +41,16 @@ public class AplicacionBancaria {
     public static void consultarSaldo() {
         System.out.printf("Su saldo actual es: $%.2f\n", saldo);
     }
+
+    public static void retirar() {
+        System.out.print("Ingrese la cantidad a retirar: ");
+        double cantidad = scanner.nextDouble();
+        
+        if (cantidad > saldo) {
+            System.out.println("Saldo insuficiente.");
+        } else {
+            saldo -= cantidad;
+            System.out.printf("Retiro exitoso. Su nuevo saldo es: $%.2f\n", saldo);
+        }
+    }
 }
