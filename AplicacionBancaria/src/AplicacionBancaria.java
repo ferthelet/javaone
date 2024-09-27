@@ -45,7 +45,7 @@ public class AplicacionBancaria {
     public static void retirar() {
         System.out.print("Ingrese la cantidad a retirar: ");
         double cantidad = scanner.nextDouble();
-        
+
         if (cantidad > saldo) {
             System.out.println("Saldo insuficiente.");
         } else {
@@ -53,4 +53,14 @@ public class AplicacionBancaria {
             System.out.printf("Retiro exitoso. Su nuevo saldo es: $%.2f\n", saldo);
         }
     }
+
+    public static void depositar() {
+        System.out.print("Ingrese la cantidad a depositar: ");
+        double cantidad = scanner.nextDouble();
+
+        saldo += cantidad;
+        System.out.printf("Depósito exitoso. Su nuevo saldo es: $%.2f\n", saldo);
+    }
+
+    
 }
