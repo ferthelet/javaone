@@ -1,4 +1,5 @@
 import com.aluracursos.screenmatch.modelos.Pelicula;
+import com.aluracursos.screenmatch.modelos.Titulo;
 
 public class Principal {
     public static void main(String[] args) {
