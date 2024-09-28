@@ -1,34 +1,34 @@
 package com.aluracursos.screenmatch.modelos;
 public class Pelicula {
 
-    String nombre;
-    int fechaDeLanzamiento;
-    int duracionEnMinutos;
-    boolean incluidoEnElplan;
+    public String nombre;
+    public int fechaDeLanzamiento;
+    public int duracionEnMinutos;
+    public boolean incluidoEnElplan;
     private double sumaDeLasEvaluaciones;
     private int totalDeEvaluaciones;
 
     // getters and setters
-    int getTotalDeEvaluaciones() {
+    public int getTotalDeEvaluaciones() {
         return totalDeEvaluaciones;
     }
-    double getSumaDeLasEvaluaciones() {
+    public double getSumaDeLasEvaluaciones() {
         return sumaDeLasEvaluaciones;
     }
 
-    void muestraFichaTecnica() {
+    public void muestraFichaTecnica() {
         System.out.println("Nombre de la pelicula: " + nombre);
         System.out.println("Fecha de lanzamiento: " + fechaDeLanzamiento);
         System.out.println("Duracion en minutos: " + duracionEnMinutos);
         System.out.println("Incluida en el plan: " + incluidoEnElplan);
     }
 
-    void evalua(double nota) {
+    public void evalua(double nota) {
         sumaDeLasEvaluaciones += nota;
         totalDeEvaluaciones++;
     }
 
-    double calculaMedia() {
+    public double calculaMedia() {
         return sumaDeLasEvaluaciones / totalDeEvaluaciones;
     }
 
