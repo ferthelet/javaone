@@ -11,6 +11,9 @@ public class Principal {
         System.out.println("Su duracion en minutos es: " + miPelicula.duracionEnMinutos);
         System.out.println("Esta incluida en el plan: " + miPelicula.incluidoEnElplan);
 
+        // con metodo muestraFichaTecnica
+        miPelicula.muestraFichaTecnica();
+
         Pelicula otraPelicula = new Pelicula();
         otraPelicula.nombre = "Matrix";
         otraPelicula.fechaDeLanzamiento = 1999;
