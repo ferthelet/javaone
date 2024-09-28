@@ -1,10 +1,10 @@
 package com.aluracursos.screenmatch.modelos;
 public class Pelicula {
 
-    public String nombre;
-    public int fechaDeLanzamiento;
-    public int duracionEnMinutos;
-    public boolean incluidoEnElplan;
+    private String nombre;
+    private int fechaDeLanzamiento;
+    private int duracionEnMinutos;
+    private boolean incluidoEnElplan;
     private double sumaDeLasEvaluaciones;
     private int totalDeEvaluaciones;
 
