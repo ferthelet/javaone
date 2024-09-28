@@ -5,5 +5,8 @@ public class Principal {
         miPelicula.fechaDeLanzamiento = 2021;
         miPelicula.duracionEnMinutos = 120;
         miPelicula.incluidoEnElplan = true;
+
+        System.out.println("Mi pelicula es: " + miPelicula.nombre);
+        System.out.println("Su fecha de lanzamiento es: " + miPelicula.fechaDeLanzamiento);
     }
 }

@@ -4,7 +4,5 @@ public class Pelicula {
     int fechaDeLanzamiento;
     int duracionEnMinutos;
     boolean incluidoEnElplan;
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, Pelicula!");
-    }
+    
 }
