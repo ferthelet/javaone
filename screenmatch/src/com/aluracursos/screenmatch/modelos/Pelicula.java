@@ -16,7 +16,7 @@ public class Pelicula {
         return sumaDeLasEvaluaciones;
     }
 
-    // setters y getter usando right click -> Source Action
+    // setters y getters usando right click -> Source Action
     public String getNombre() {
         return nombre;
     }
@@ -41,7 +41,7 @@ public class Pelicula {
     public void setIncluidoEnElplan(boolean incluidoEnElplan) {
         this.incluidoEnElplan = incluidoEnElplan;
     }
-    
+
     public void muestraFichaTecnica() {
         System.out.println("Nombre de la pelicula: " + nombre);
         System.out.println("Fecha de lanzamiento: " + fechaDeLanzamiento);
