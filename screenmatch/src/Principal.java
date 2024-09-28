@@ -11,8 +11,15 @@ public class Principal {
 
         miPelicula.evalua(10);
         miPelicula.evalua(10);
+        miPelicula.evalua(7.8);
+
         System.out.println(miPelicula.sumaDeLasEvaluaciones);
         System.out.println(miPelicula.totalDeEvaluaciones);
+        System.out.println(miPelicula.calculaMedia());
+
+        // usuario "mal intencionado" califica negativamente
+        miPelicula.sumaDeLasEvaluaciones = 2;
+        miPelicula.totalDeEvaluaciones = 1;
         System.out.println(miPelicula.calculaMedia());
 
         Pelicula otraPelicula = new Pelicula();
