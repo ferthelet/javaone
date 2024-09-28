@@ -7,6 +7,14 @@ public class Pelicula {
     private double sumaDeLasEvaluaciones;
     private int totalDeEvaluaciones;
 
+    // getters and setters
+    int getTotalDeEvaluaciones() {
+        return totalDeEvaluaciones;
+    }
+    double getSumaDeLasEvaluaciones() {
+        return sumaDeLasEvaluaciones;
+    }
+
     void muestraFichaTecnica() {
         System.out.println("Nombre de la pelicula: " + nombre);
         System.out.println("Fecha de lanzamiento: " + fechaDeLanzamiento);
