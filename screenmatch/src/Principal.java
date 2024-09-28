@@ -9,9 +9,11 @@ public class Principal {
         // con metodo muestraFichaTecnica
         miPelicula.muestraFichaTecnica();
 
-        miPelicula.evalua(7.8);
         miPelicula.evalua(10);
-        System.out.println(miPelicula.sumaDeLasEvaluaciones);        
+        miPelicula.evalua(10);
+        System.out.println(miPelicula.sumaDeLasEvaluaciones);
+        System.out.println(miPelicula.totalDeEvaluaciones);
+        System.out.println(miPelicula.calculaMedia());
 
         Pelicula otraPelicula = new Pelicula();
         otraPelicula.nombre = "Matrix";
