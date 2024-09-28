@@ -16,6 +16,32 @@ public class Pelicula {
         return sumaDeLasEvaluaciones;
     }
 
+    // setters y getter usando right click -> Source Action
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public int getFechaDeLanzamiento() {
+        return fechaDeLanzamiento;
+    }
+    public void setFechaDeLanzamiento(int fechaDeLanzamiento) {
+        this.fechaDeLanzamiento = fechaDeLanzamiento;
+    }
+    public int getDuracionEnMinutos() {
+        return duracionEnMinutos;
+    }
+    public void setDuracionEnMinutos(int duracionEnMinutos) {
+        this.duracionEnMinutos = duracionEnMinutos;
+    }
+    public boolean isIncluidoEnElplan() {
+        return incluidoEnElplan;
+    }
+    public void setIncluidoEnElplan(boolean incluidoEnElplan) {
+        this.incluidoEnElplan = incluidoEnElplan;
+    }
+    
     public void muestraFichaTecnica() {
         System.out.println("Nombre de la pelicula: " + nombre);
         System.out.println("Fecha de lanzamiento: " + fechaDeLanzamiento);
