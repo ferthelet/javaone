@@ -21,5 +21,10 @@ public class Principal {
         System.out.println("Su fecha de lanzamiento es: " + otraPelicula.fechaDeLanzamiento);
         System.out.println("Su duracion en minutos es: " + otraPelicula.duracionEnMinutos);
         System.out.println("Esta incluida en el plan: " + otraPelicula.incluidoEnElplan);
+
+        // Pruebas 
+        System.out.println("Pruebas");
+        System.out.println("Direccion miPelicula: " + miPelicula);
+        System.out.println("Direccion otraPelicula: " + otraPelicula);
     }
 }
