@@ -25,6 +25,7 @@ public class Principal {
         casaDragon.setTemporadas(1);
         casaDragon.setEpisodiosPorTemporada(10);
         casaDragon.setMinutosPorEpisodio(50);
+        casaDragon.muestraFichaTecnica();
         System.out.println(casaDragon.getDuracionEnMinutos());
 
 
