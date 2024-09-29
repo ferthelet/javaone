@@ -154,6 +154,93 @@ Las anotaciones son muy útiles y comunes en aplicaciones Java, por lo que es im
 
 Mas info en [Creando anotaciones en Java](https://www.aluracursos.com/blog/crear-anotaciones-en-java)
 
+## Polimorfismo en Java
+
+El polimorfismo es un concepto fundamental de la programación orientada a objetos en Java que permite que objetos de diferentes clases se comporten de manera uniforme. Esto se logra a través de la capacidad de una clase para tomar varias formas o comportarse de diferentes maneras según el contexto. En Java, el polimorfismo se implementa principalmente mediante **dos**////7777 mecanismos: el polimorfismo de clases (herencia) y el polimorfismo de interfaces.
+
+### Polimorfismo de Clases (Herencia)
+
+En el polimorfismo de clases, las subclases heredan comportamientos de su superclase. Cada subclase puede proporcionar su propia implementación de métodos heredados.
+
+```java
+class Animal {
+    void hacerSonido() {
+        System.out.println("Hace un sonido genérico");
+    }
+}
+
+class Perro extends Animal {
+    void hacerSonido() {
+        System.out.println("El perro ladra");
+    }
+}
+
+class Gato extends Animal {
+    void hacerSonido() {
+        System.out.println("El gato maulla");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal miMascota = new Perro();
+        miMascota.hacerSonido(); // Salida: El perro ladra
+
+        miMascota = new Gato();
+        miMascota.hacerSonido(); // Salida: El gato maulla
+    }
+}
+```
+
+### Polimorfismo de Interfaces:
+
+En el polimorfismo de interfaces, múltiples clases implementan la misma interfaz y proporcionan su propia implementación de los métodos definidos en la interfaz. Esto permite tratar objetos de diferentes clases de manera intercambiable. 
+
+```java
+interface Figura {
+    double calcularArea();
+}
+
+class Circulo implements Figura {
+    double radio;
+
+    Circulo(double radio) {
+        this.radio = radio;
+    }
+
+    public double calcularArea() {
+        return Math.PI * radio * radio;
+    }
+}
+
+class Rectangulo implements Figura {
+    double longitud, ancho;
+
+    Rectangulo(double longitud, double ancho) {
+        this.longitud = longitud;
+        this.ancho = ancho;
+    }
+
+    public double calcularArea() {
+        return longitud * ancho;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Figura figura1 = new Circulo(5.0);
+        Figura figura2 = new Rectangulo(4.0, 3.0);
+
+        System.out.println("Área del círculo: " + figura1.calcularArea()); // Salida: Área del círculo: 78.54
+        System.out.println("Área del rectángulo: " + figura2.calcularArea()); // Salida: Área del rectángulo: 12.0
+    }
+}
+```
+
+En estos ejemplos, el polimorfismo permite que objetos de diferentes clases sean tratados de manera uniforme, lo que promueve la flexibilidad y la reutilización del código.
+
+Para mas informacion [POO: ¿Qué es la programación orientada a objetos?](https://www.aluracursos.com/blog/poo-que-es-la-programacion-orientada-a-objetos)
+
 ## Folder Structure
 
 The workspace contains two folders by default, where:
