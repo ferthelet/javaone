@@ -7,6 +7,7 @@ public class Audio {
     private int totalDeMeGusta;
     private int clasificacion;
 
+    // getters y setters
     public void meGusta() {
         this.totalDeMeGusta++;
     }
