@@ -63,6 +63,97 @@ El método recibe como parámetro un booleano que tiene el mismo nombre que el a
 - El uso de la palabra clave "this".
 - Buenas prácticas para dividir el código en paquetes, siguiendo la convención de dominio de la empresa al revés, por ejemplo, "com.aluracursos.screenmatch".
 
+## Herencia
+
+La herencia es un concepto fundamental en la programación orientada a objetos y se implementa en Java a través de la relación "es un" entre clases. Esto significa que una clase puede heredar atributos y métodos de otra clase, lo que hace que el código sea más reutilizable.
+
+En Java, la herencia se realiza utilizando la palabra clave **extends**. La clase que se hereda se llama subclase y la clase que es heredada se llama superclase. La subclase puede acceder a todos los atributos y métodos públicos y protegidos de la superclase, además de poder sobrescribir `@Override` los métodos de la superclase para crear comportamientos específicos.
+
+```java
+public class Cuenta {
+
+  private String titular;
+  private double saldo;
+
+  public void retirar(double valor) {
+    if (valor <= 0) {
+      System.out.println("El valor debe ser mayor que cero");
+    } else if (saldo >= valor) {
+      saldo -= valor;
+      System.out.println("Retiro realizado com éxito. Saldo actual: " +saldo);
+    } else {
+      System.out.println("Saldo insuficiente.");
+    }
+  }
+
+  public void depositar(double valor) {
+    if (valor > 0) {
+      saldo += valor;
+      System.out.println("Depósito realizado com éxito. Saldo actual: " +saldo);
+    } else {
+      System.out.println("El valor debe ser mayor que cero");
+    }
+  }
+
+  //getters y setters
+}
+```
+
+```java
+public class CuentaAhorro extends Cuenta{
+
+  private double tasaDeIntereses;
+
+  public void calcularIntereses() {
+    double intereses= this.getSaldo() * tasaDeIntereses;
+    System.out.println("Intereses actuales : " + intereses);
+  }
+
+  public void retirar(double valor) {
+    double tasaDeRetiro= 0.01;
+    super.retirar(valor + tasaDeRetiro);
+  }
+
+  //getters y setters
+}
+```
+
+En el código anterior, la clase `Cuenta` es la superclase y la clase `CuentaAhorro` es la subclase. La clase `CuentaAhorro` hereda los atributos y métodos de la clase `Cuenta`, y agrega un nuevo atributo `tasaDeIntereses` y un nuevo método `calcularIntereses`. Aunque los atributos son heredados, como se declararon como private en la superclase, no pueden ser accedidos directamente en la subclase, por lo que se deben utilizar los métodos `getters/setters`, que son públicos.
+
+También observe en el código anterior que la subclase sobrescribe el método retirar para descontar la tarifa de retiro, además de usar la palabra clave `super` para llamar al método de la superclase, evitando duplicar un código ya existente. Esta es la gran ventaja de la herencia: la reutilización de código con la flexibilidad para sobrescribir comportamientos.
+
+### Herencia multiple
+
+En Java, es importante destacar que **no** se permite la herencia múltiple. La herencia múltiple ocurre cuando una subclase hereda de dos o más superclases. Se puede simular estableciendo una jerarquia.
+
+```java
+public class Cuenta{
+  //codigo de la clase omitido
+}
+
+public class CuentaCorriente extends Cuenta{
+ //codigo de la clase omitido
+}
+
+public class CuentaCorrientePersonaFisica extends  CuentaCorriente {
+  //codigo de la clase omitido
+}
+```
+
+En el código anterior, la clase `CuentaCorrientePersonaFisica` hereda de CuentaCorriente , que a su vez hereda de la clase `Cuenta`, es decir, indirectamente la clase `CuentaCorrientePersonaFisica` heredará de `Cuenta`, ya que su superclase hereda de ella.
+
+## Anotaciones: `Annotations`
+
+son una forma de agregar configuraciones al código Java de manera muy sencilla. Se utilizan para proporcionar información adicional sobre el código, como el significado de una clase, un método o un atributo.
+
+En Java, las anotaciones se definen utilizando el símbolo `@` seguido del nombre de la anotación. Por ejemplo, la anotación `@Deprecated` se utiliza para indicar que un método o clase está obsoleto y no debe utilizarse más. Otra anotación muy útil es `@`Override`, como se mostró en el último video, que indica que un método está sobrescribiendo el mismo método definido en su clase padre.
+
+Varias especificaciones y frameworks de Java, como `Hibernate`, `Bean Validation` y `Spring`, utilizan anotaciones. Por ejemplo, en `Bean Validation`, la anotación `@NotNull` se utiliza para validar que un atributo no sea nulo.
+
+Las anotaciones son muy útiles y comunes en aplicaciones Java, por lo que es importante que estés familiarizado con este recurso, ya que seguramente lo utilizarás mucho en tus proyectos.
+
+Mas info en [Creando anotaciones en Java](https://www.aluracursos.com/blog/crear-anotaciones-en-java)
+
 ## Folder Structure
 
 The workspace contains two folders by default, where:
@@ -73,6 +164,7 @@ The workspace contains two folders by default, where:
 Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
 > If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+
 ## Dependency Management
 
 The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
