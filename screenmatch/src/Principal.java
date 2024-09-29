@@ -35,14 +35,16 @@ public class Principal {
         calculadora.incluye(casaDragon);
         System.out.println(calculadora.getTiempoTotal());
 
+        // otra pelicula
+        Pelicula otraPelicula = new Pelicula();
+        otraPelicula.setNombre("Matrix");
+        otraPelicula.setFechaDeLanzamiento(1998);
+        otraPelicula.setDuracionEnMinutos(180);
+        otraPelicula.setIncluidoEnElplan(false);
 
-        // Pelicula otraPelicula = new Pelicula();
-        // otraPelicula.nombre = "Matrix";
-        // otraPelicula.fechaDeLanzamiento = 1999;
-        // otraPelicula.duracionEnMinutos = 180;
-        // otraPelicula.incluidoEnElplan = false;
-
-        // otraPelicula.muestraFichaTecnica();
+        otraPelicula.muestraFichaTecnica();
+        calculadora.incluye(otraPelicula);
+        System.out.println("Tiempo necesario para ver tus titulos favoritos estas vacaciones: " + calculadora.getTiempoTotal() + " minutos");
 
         // Pruebas 
         // System.out.println("Pruebas");
