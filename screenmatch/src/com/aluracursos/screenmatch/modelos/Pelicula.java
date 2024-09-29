@@ -12,5 +12,10 @@ public class Pelicula extends Titulo implements Clasificacion {
     public void setDirector(String director) {
         this.director = director;
     }
+
+    @Override
+    public int getClasificacion() {
+        return (int) (calculaMedia() / 2);
+    }
     
 }
