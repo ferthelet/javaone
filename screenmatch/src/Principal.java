@@ -32,6 +32,9 @@ public class Principal {
         calculadora.incluye(miPelicula);
         System.out.println(calculadora.getTiempoTotal());
 
+        calculadora.incluye(casaDragon);
+        System.out.println(calculadora.getTiempoTotal());
+
 
         // Pelicula otraPelicula = new Pelicula();
         // otraPelicula.nombre = "Matrix";
