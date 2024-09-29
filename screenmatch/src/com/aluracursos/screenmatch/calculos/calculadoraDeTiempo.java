@@ -5,14 +5,11 @@ public class CalculadoraDeTiempo {
 
     private int tiempoTotal;
     
-    // getter 
-    public int getTiempoTotal() {
-        return tiempoTotal;
-    }
-
     public void incluye(Pelicula pelicula) {
         tiempoTotal += pelicula.getDuracionEnMinutos();
     }
 
-
+    public int getTiempoTotal() {
+        return tiempoTotal;
+    }
 }

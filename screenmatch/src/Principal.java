@@ -30,7 +30,8 @@ public class Principal {
 
         CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
         calculadora.incluye(miPelicula);
-        
+        System.out.println(calculadora.getTiempoTotal());
+
 
         // Pelicula otraPelicula = new Pelicula();
         // otraPelicula.nombre = "Matrix";
