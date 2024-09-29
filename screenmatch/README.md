@@ -324,6 +324,200 @@ Observe que ahora el atributo saldo se accede directamente desde la clase Cuenta
 - Cómo sobrescribir un método heredado, con la opción de usar la anotación @Override.
 - Cómo aplicar el concepto de polimorfismo en el código para evitar duplicación de métodos.
 
+## Entendiendo las interfaces
+
+En Java, las interfaces son una forma de definir un contrato que las clases deben seguir, especificando qué métodos deben ser implementados por las clases que las utilicen. Las interfaces permiten que diferentes clases se puedan tratar de manera estandarizada mediante el polimorfismo, lo que hace que el código sea fácil de extender con nuevos comportamientos.
+
+```java
+public interface Tributable {
+
+    double getValorImpuesto();
+
+}
+```
+
+En el ejemplo de código anterior, estamos definiendo una interfaz llamada `Tributable` que contiene un único método llamado `getValorImpuesto()` que devuelve un valor de tipo `double`. Cualquier clase que quiera ser tributable en el proyecto puede implementar esta interfaz.
+
+Para implementar una interfaz, se utiliza la palabra clave `implements` después de la definición de la clase. La clase que implementa la interfaz debe proporcionar implementaciones para todos los métodos definidos en la interfaz.
+
+```java
+public class Producto implements Tributable{
+
+    private String nombre;
+    private double valor;
+
+    @Override
+    public double getValorImpuesto() {
+        return this.valor * 0.1;
+    }
+
+    //getters y setters
+}
+```
+
+En el ejemplo anterior, estamos creando una clase llamada `Producto` que implementa la interfaz `Tributable`. Esta clase proporciona una implementación del método `getValorImpuesto()` que está definido en la interfaz `Tributable`. La implementación calcula el impuesto como el 10% del valor del producto.
+
+También podríamos tener una clase de servicio, como se muestra a continuación:
+
+```java
+public class Servicio implements Tributable {
+
+    private String descripcion;
+    private double valor;
+    private double cuotaJubilacion;
+
+    @Override
+    public double getValorImpuesto() {
+        return this.valor * this.cuotaJubilacion / 100;
+    }
+
+    //getters y setters
+}
+```
+
+En el ejemplo anterior, estamos creando una clase llamada `Servicio` que también implementa la interfaz `Tributable`. Esta clase proporciona una implementación del método `getValorImpuesto()` que calcula el impuesto como el valor multiplicado por la cuota de `Jubilacion` dividido por 100.
+
+### Uso de interfaces
+
+Las interfaces se pueden utilizar para definir comportamientos que se pueden aplicar a diferentes clases, lo que hace que el código sea más modular y fácil de mantener. Por ejemplo, supongamos que tenemos un sistema de ventas que necesita calcular el impuesto de diferentes tipos de productos. Podemos crear la interfaz `Tributable` para definir el comportamiento de cálculo de impuestos y luego crear varias clases diferentes que implementen esta interfaz para calcular el impuesto de diferentes productos.
+
+```java
+public class CalculadoraImpuestos {
+
+    private double totalImpuesto = 0;
+
+    public void calcularImpuesto(Tributable item) {
+        this.totalImpuesto += item.getValorImpuesto();
+    }
+
+    public double getTotalImpuesto() {
+      return this.totalImpuesto;
+    }
+
+}
+```
+
+En este ejemplo, estamos creando una clase llamada `CalculadoraImpuesto` que tiene un atributo privado llamado `totalImpuesto` para almacenar el valor total de los impuestos. El método `calcularImpuesto` recibe un parámetro de tipo `Tributable`. Al declarar una variable con el tipo de una interfaz, como se hace en este método, podemos asignarle cualquier objeto que implemente esa interfaz, ya sea un objeto de tipo `Servicio` o `Producto`. En ambos casos, la `CalculadoraImpuesto` llamará al método implementado en la clase específica. Esto es muy útil cuando queremos tratar varios objetos de clases diferentes de manera similar, lo que facilita el mantenimiento y la extensión del código. Este es otro ejemplo de la aplicación del polimorfismo en Java, pero ahora con el uso de interfaces.
+
+## Ejercicio de herencia e interfaz
+
+Tu amigo Andrés está trabajando en una aplicación Java para una tienda y necesita implementar una nueva funcionalidad de tributación de impuestos. Hasta ahora, la aplicación tenía las siguientes clases:
+
+```java
+
+public class Item{
+
+    private String nombre;
+    private double precio;
+
+    // métodos getters y setters omitidos
+
+}
+```
+
+```java
+
+public class Producto extends Item{
+
+    private double peso;
+
+    // métodos getters y setters omitidos
+
+}
+```
+
+```java
+
+public class Servicio extends Item{
+
+    private int cantidadHoras;
+
+    // otros métodos de la clase Servicio
+
+}
+```
+
+```java
+
+public class Regalo extends Item{
+
+    private String justificacion;
+
+    // métodos getters y setters omitidos
+
+}
+```
+
+Y para implementar la nueva funcionalidad, Andrés creó una interfaz llamada `Tributable` con el siguiente código:
+
+```java
+
+public interface Tributable{
+
+    double calculaImpuesto();
+
+}
+```
+
+Y también creó una clase para calcular el total de impuestos:
+
+```java
+
+public class CalculadoraImpuesto {
+
+    private double totalImpuesto = 0;
+
+    public void calculaImpuesto(Tributable tributable) {
+        totalImpuesto += tributable.calculaImpuesto();
+    }
+
+}
+```
+
+Y para que los Productos y Servicios de la tienda sean grabados, modificó el código de estas respectivas clases para que implementen la interfaz `Tributable`:
+
+```java
+
+public class Producto extends Item implements Tributable {
+
+    private double peso;
+
+    public double calculaImpuesto() {
+        //producto tiene 10% de impuesto:
+        return getPrecio() * 0.1;
+    }
+
+    // métodos getters y setters omitidos
+
+}
+```
+
+```java
+
+public class Servicio extends Item implements Tributable {
+
+    private int cantidadHoras;
+
+    public double calculaImpuesto() {
+        //servicio tiene 12% de impuesto:
+        return getPrecio() * 0.12;
+    }
+
+    // otros métodos de la clase Servicio
+
+}
+```
+
+- La interfaz Imponible debe implementarse solo en las clases que sean tributables, independientemente del uso de la herencia.
+- Gracias al polimorfismo, objetos de diferentes clases pueden tratarse de manera uniforme, lo que simplifica el código y evita duplicaciones.
+
+## Lo que has aprendido
+
+- Que en Java, una clase puede heredar de solo una clase.
+- El concepto de interfaces en Java.
+- Que en una interfaz, todos los métodos son públicos, por lo que no es necesario usar la palabra reservada "public" en sus declaraciones.
+- Que también es posible aplicar el polimorfismo mediante el uso de interfaces, de manera similar a lo que se demostró con la herencia en lecciones anteriores.
+
 ## Folder Structure
 
 The workspace contains two folders by default, where:
