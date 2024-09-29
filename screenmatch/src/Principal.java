@@ -26,7 +26,6 @@ public class Principal {
         casaDragon.setEpisodiosPorTemporada(10);
         casaDragon.setMinutosPorEpisodio(50);
         casaDragon.muestraFichaTecnica();
-        System.out.println(casaDragon.getDuracionEnMinutos());
 
 
         // Pelicula otraPelicula = new Pelicula();
