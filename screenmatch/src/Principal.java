@@ -1,3 +1,4 @@
+import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Serie;
 
@@ -27,6 +28,9 @@ public class Principal {
         casaDragon.setMinutosPorEpisodio(50);
         casaDragon.muestraFichaTecnica();
 
+        CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
+        calculadora.incluye(miPelicula);
+        
 
         // Pelicula otraPelicula = new Pelicula();
         // otraPelicula.nombre = "Matrix";
