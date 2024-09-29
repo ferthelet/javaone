@@ -241,6 +241,83 @@ En estos ejemplos, el polimorfismo permite que objetos de diferentes clases sean
 
 Para mas informacion [POO: ¿Qué es la programación orientada a objetos?](https://www.aluracursos.com/blog/poo-que-es-la-programacion-orientada-a-objetos)
 
+## El modificador protected
+
+Al usar herencia en Java, tenemos la posibilidad de utilizar el modificador de acceso `protected`, que permite que los atributos de una clase sean accesibles por otras clases del mismo paquete y también por sus subclases, independientemente del paquete en el que se encuentren.
+
+El modificador `protected` es útil en situaciones en las que una clase necesita permitir que sus subclases accedan directamente a sus atributos, sin la necesidad de restringir el acceso solo a través de los métodos `getters` y `setters`. Por ejemplo, supongamos que tenemos las siguientes clases en un proyecto:
+
+```java
+public class Cuenta {
+
+  private String titular;
+  private double saldo;
+
+  public void retirar(double valor) {
+    //codigo omitido
+    }
+
+  public void depositar(double valor) {
+//codigo omitido
+     }
+
+  //getters y setters
+}
+```
+
+```java
+public class CuentaAhorro extends Cuenta{
+
+  private double tasaDeIntereses;
+
+  public void calcularIntereses() {
+    double intereses= this.getSaldo() * tasaDeIntereses;
+    System.out.println("Intereses actuales : " + intereses);
+  }
+
+  //getters y setters
+}
+```
+
+En el código anterior, observe que en el método `calcularIntereses` de la clase `CuentaAhorro`, el atributo saldo no se accede directamente, ya que se declaró como private en la clase `Cuenta`, por lo que su acceso debe realizarse mediante el método `getSaldo()`.
+
+Podemos declarar el atributo saldo como `protected` para evitar esta situación y permitir el acceso directo a él desde las clases que heredan de la clase Cuenta:
+
+```java
+public class Cuenta {
+
+  private String titular;
+  protected double saldo;
+
+  public void retirar(double valor) {
+    //codigo omitido
+    }
+
+  public void depositar(double valor) {
+//codigo omitido
+     }
+
+  //getters y setters
+}
+```
+
+```java
+public class CuentaAhorro extends Cuenta{
+
+  private double tasaDeIntereses;
+
+  public void calcularIntereses() {
+    double intereses= this.saldo() * tasaDeIntereses;
+    System.out.println("Intereses actuales : " + intereses);
+  }
+
+  //getters y setters
+}
+```
+
+Observe que ahora el atributo saldo se accede directamente desde la clase `CuentaAhorro`.
+
+
 ## Folder Structure
 
 The workspace contains two folders by default, where:
