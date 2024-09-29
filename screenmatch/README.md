@@ -156,7 +156,7 @@ Mas info en [Creando anotaciones en Java](https://www.aluracursos.com/blog/crear
 
 ## Polimorfismo en Java
 
-El polimorfismo es un concepto fundamental de la programación orientada a objetos en Java que permite que objetos de diferentes clases se comporten de manera uniforme. Esto se logra a través de la capacidad de una clase para tomar varias formas o comportarse de diferentes maneras según el contexto. En Java, el polimorfismo se implementa principalmente mediante **dos**////7777 mecanismos: el polimorfismo de clases (herencia) y el polimorfismo de interfaces.
+El polimorfismo es un concepto fundamental de la programación orientada a objetos en Java que permite que objetos de diferentes clases se comporten de manera uniforme. Esto se logra a través de la capacidad de una clase para tomar varias formas o comportarse de diferentes maneras según el contexto. En Java, el polimorfismo se implementa principalmente mediante **dos** mecanismos: el polimorfismo de clases (herencia) y el polimorfismo de interfaces.
 
 ### Polimorfismo de Clases (Herencia)
 
