@@ -315,8 +315,14 @@ public class CuentaAhorro extends Cuenta{
 }
 ```
 
-Observe que ahora el atributo saldo se accede directamente desde la clase `CuentaAhorro`.
+Observe que ahora el atributo saldo se accede directamente desde la clase CuentaAhorro.
 
+## Lo que has aprendido hasta el momento
+
+- El problema de tener código duplicado en varias clases y cómo utilizar la herencia como solución.
+- La palabra clave extends, que se utiliza para indicar que una clase hereda de otra.
+- Cómo sobrescribir un método heredado, con la opción de usar la anotación @Override.
+- Cómo aplicar el concepto de polimorfismo en el código para evitar duplicación de métodos.
 
 ## Folder Structure
 
