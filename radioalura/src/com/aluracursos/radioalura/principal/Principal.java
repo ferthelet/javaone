@@ -12,5 +12,17 @@ public class Principal {
         Podcast miPodcast = new Podcast();
         miPodcast.setPresentador("Gabriela Aguiar");
         miPodcast.setTitulo("Café Tech");
+
+        for (int i = 0; i < 100; i++) {
+            miCancion.meGusta();
+        }
+        
+        for (int i = 0; i < 5000; i++) {
+            miCancion.reproduce();            
+        }
+        
+        System.out.println("Total reproducciones: " + miCancion.getTotalReproducciones());
+        System.out.println("Total Me gusta: " + miCancion.getTotalDeMeGusta());
+        
     }
 }
