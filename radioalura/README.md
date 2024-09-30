@@ -1,6 +1,6 @@
-## Getting Started
+## Construyendo la app de Radio Alura
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Aplicar sus conocimientos en una aplicación de un sistema de audio/música, utilizando conceptos de orientación a objetos, encapsulamiento, herencia y polimorfismo.
 
 ## Folder Structure
 
