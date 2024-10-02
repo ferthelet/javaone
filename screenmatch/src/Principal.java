@@ -60,6 +60,13 @@ public class Principal {
         System.out.println(episodio.getNombre());
         filtroRecomendacion.filtra(episodio);
 
+        var peliculaDeBruno = new Pelicula();
+        peliculaDeBruno.setNombre("El Senior de los Anillos");
+        peliculaDeBruno.setFechaDeLanzamiento(2001);
+        peliculaDeBruno.setDuracionEnMinutos(180);
+        
+        
+
         // Pruebas 
         // System.out.println("Pruebas");
         // System.out.println("Direccion miPelicula: " + miPelicula);
