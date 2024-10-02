@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 import com.aluracursos.screenmatch.calculos.FiltroRecomendacion;
 import com.aluracursos.screenmatch.modelos.Episodio;
@@ -65,7 +67,10 @@ public class Principal {
         peliculaDeBruno.setFechaDeLanzamiento(2001);
         peliculaDeBruno.setDuracionEnMinutos(180);
         
-        
+        ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
+        listaDePeliculas.add(peliculaDeBruno);
+        listaDePeliculas.add(miPelicula);
+        listaDePeliculas.add(otraPelicula);
 
         // Pruebas 
         // System.out.println("Pruebas");
