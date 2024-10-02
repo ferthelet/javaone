@@ -72,6 +72,9 @@ public class Principal {
         listaDePeliculas.add(miPelicula);
         listaDePeliculas.add(otraPelicula);
 
+        System.out.println(listaDePeliculas.size());
+        System.out.println(listaDePeliculas.get(0).getNombre());
+
         // Pruebas 
         // System.out.println("Pruebas");
         // System.out.println("Direccion miPelicula: " + miPelicula);
