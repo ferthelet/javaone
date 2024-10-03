@@ -31,8 +31,8 @@ public class PrincipalConListas {
 
         for (Titulo titulo : lista) {
             System.out.println(titulo.getNombre());
-            if (titulo instanceof Pelicula pelicula) {
-                System.out.println(pelicula.getClasificacion());
+            if (titulo instanceof Pelicula pelicula && pelicula.getClasificacion() > 3) {
+                System.out.println("Clasificacion: " + pelicula.getClasificacion());
             }
         }
     }
