@@ -5,10 +5,12 @@ public class Pelicula extends Titulo implements Clasificacion {
 
     private String director;
 
+    // constructor
     public Pelicula(String nombre) {
         this.setNombre(nombre);
     }
 
+    // gets /sets
     public String getDirector() {
         return director;
     }
