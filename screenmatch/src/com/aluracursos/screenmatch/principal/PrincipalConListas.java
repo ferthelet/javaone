@@ -30,12 +30,11 @@ public class PrincipalConListas {
         lista.add(casaDragon);
 
         for (Titulo titulo : lista) {
-            System.out.println(titulo);
-            Pelicula pelicula = (Pelicula) titulo;
-            System.out.println(pelicula.getClasificacion());
-            
+            System.out.println(titulo.getNombre());
+            if (titulo instanceof Pelicula) {
+                Pelicula pelicula = (Pelicula) titulo;
+                System.out.println(pelicula.getClasificacion());
+            }
         }
-        
     }
-
 }
