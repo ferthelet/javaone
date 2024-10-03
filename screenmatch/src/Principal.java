@@ -8,8 +8,7 @@ import com.aluracursos.screenmatch.modelos.Serie;
 
 public class Principal {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula();
-        miPelicula.setNombre("Encanto");
+        Pelicula miPelicula = new Pelicula("Encanto");
         miPelicula.setFechaDeLanzamiento(2021);
         miPelicula.setDuracionEnMinutos(120);
         miPelicula.setIncluidoEnElplan(true);
@@ -40,8 +39,7 @@ public class Principal {
         System.out.println(calculadora.getTiempoTotal());
 
         // otra pelicula
-        Pelicula otraPelicula = new Pelicula();
-        otraPelicula.setNombre("Matrix");
+        Pelicula otraPelicula = new Pelicula("Matrix");
         otraPelicula.setFechaDeLanzamiento(1998);
         otraPelicula.setDuracionEnMinutos(180);
         otraPelicula.setIncluidoEnElplan(false);
@@ -62,8 +60,7 @@ public class Principal {
         System.out.println(episodio.getNombre());
         filtroRecomendacion.filtra(episodio);
 
-        var peliculaDeBruno = new Pelicula();
-        peliculaDeBruno.setNombre("El Senior de los Anillos");
+        var peliculaDeBruno = new Pelicula("El Senior de los Anillos");
         peliculaDeBruno.setFechaDeLanzamiento(2001);
         peliculaDeBruno.setDuracionEnMinutos(180);
         
