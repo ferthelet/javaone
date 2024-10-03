@@ -39,6 +39,11 @@ public class PrincipalConListas {
         ArrayList<String> listaDeArtistas = new ArrayList<>();
         listaDeArtistas.add("Penelope Cruz");
         listaDeArtistas.add("Antonio Banderas");
-        listaDeArtistas.add("Ricardo Arjona");
+        listaDeArtistas.add("Ricardo Darin");
+
+        // Collection sort 2.0
+        System.out.println("Lista de artistas: " + listaDeArtistas);
+        listaDeArtistas.sort(String::compareToIgnoreCase);
+        System.out.println("Lista ordenada de artistas: " + listaDeArtistas);
     }
 }
