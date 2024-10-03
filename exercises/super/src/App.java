@@ -1,6 +1,6 @@
 
 class Animal {
-    protected String name;
+    String name;
 
     // constructor
     public Animal(String name) {
