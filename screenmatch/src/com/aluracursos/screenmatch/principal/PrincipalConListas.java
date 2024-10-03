@@ -35,5 +35,10 @@ public class PrincipalConListas {
                 System.out.println("Clasificacion: " + pelicula.getClasificacion());
             }
         }
+
+        ArrayList<String> listaDeArtistas = new ArrayList<>();
+        listaDeArtistas.add("Penelope Cruz");
+        listaDeArtistas.add("Antonio Banderas");
+        listaDeArtistas.add("Ricardo Arjona");
     }
 }
