@@ -2,6 +2,7 @@ package com.aluracursos.screenmatch.principal;
 
 import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Serie;
+import java.util.ArrayList;
 
 public class PrincipalConListas {
     public static void main(String[] args) {
@@ -14,6 +15,13 @@ public class PrincipalConListas {
         // series
         Serie casaDragon = new Serie("La casa del dragon", 2022);
         Serie lost = new Serie("Lost", 2000);
+
+        // arraylist
+        ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
+        listaDePeliculas.add(peliculaDeBruno);
+        listaDePeliculas.add(miPelicula);
+        listaDePeliculas.add(otraPelicula);
+        
 
     }
 
