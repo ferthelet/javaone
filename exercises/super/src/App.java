@@ -1,6 +1,6 @@
 
 class Animal {
-    String name;
+    protected String name;
 
     // constructor
     public Animal(String name) {
@@ -9,7 +9,7 @@ class Animal {
 }
 
 interface Sound {
-    public void makingSound();
+    public String makingSound();
 }
 
 class Dog extends Animal implements Sound {
@@ -18,12 +18,12 @@ class Dog extends Animal implements Sound {
         super(name); // calls the animal constructor
     }
 
-    public void makingSound() {
-        System.out.println("The dog barks.");
+    public String makingSound() {
+       return("The dog's barking.");
     }
 
-    public void printName() {
-        System.out.println("The dog's name is " + name);
+    public String printName() {
+        return("The dog's name is " + name);
     }
 }
 
@@ -33,25 +33,23 @@ class Cat extends Animal implements Sound {
         super(name); // calls the animal constructor
     }
 
-    public void makingSound() {
-        System.out.println("The cat meows.");
+    public String makingSound() {
+        return("The cat's meowing.");
     }
 
-    public void printName() {
-        System.out.println("The cat's name is " + name);
+    public String printName() {
+        return("The cat's name is " + name);
     }
 }
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, Dog!");
         Dog dog = new Dog("Buddy");
-        dog.makingSound();
-        dog.printName();
-        System.out.println("Hello, Cat!");
+        System.out.println("Hello " + dog.printName());
+        System.out.println(dog.makingSound());
         Cat cat = new Cat("Whiskers");
-        cat.makingSound();
-        cat.printName();
-        
+        System.out.println("Hello " + cat.printName());
+        System.out.println(cat.makingSound());
+                
     }
 }
