@@ -3,7 +3,7 @@ package com.aluracursos.screenmatch.modelos;
 public class Serie extends Titulo {
 
     private int temporadas;
-    private boolean sctiva;
+    private boolean activa;
     private int episodiosPorTemporada;
     private int minutosPorEpisodio;
 
