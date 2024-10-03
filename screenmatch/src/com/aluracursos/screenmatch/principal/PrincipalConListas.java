@@ -17,10 +17,10 @@ public class PrincipalConListas {
         Serie lost = new Serie("Lost", 2000);
 
         // arraylist
-        ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
-        listaDePeliculas.add(peliculaDeBruno);
-        listaDePeliculas.add(miPelicula);
-        listaDePeliculas.add(otraPelicula);
+        ArrayList<Pelicula> lista = new ArrayList<>();
+        lista.add(peliculaDeBruno);
+        lista.add(miPelicula);
+        lista.add(otraPelicula);
         
 
     }
