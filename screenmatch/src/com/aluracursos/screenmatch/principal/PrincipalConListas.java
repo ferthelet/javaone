@@ -2,6 +2,8 @@ package com.aluracursos.screenmatch.principal;
 
 import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Serie;
+import com.aluracursos.screenmatch.modelos.Titulo;
+
 import java.util.ArrayList;
 
 public class PrincipalConListas {
@@ -17,12 +19,13 @@ public class PrincipalConListas {
         Serie lost = new Serie("Lost", 2000);
 
         // arraylist
-        ArrayList<Pelicula> lista = new ArrayList<>();
+        ArrayList<Titulo> lista = new ArrayList<>();
         lista.add(peliculaDeBruno);
         lista.add(miPelicula);
         lista.add(otraPelicula);
+        lista.add(lost);
+        lista.add(casaDragon);
         
-
     }
 
 }
