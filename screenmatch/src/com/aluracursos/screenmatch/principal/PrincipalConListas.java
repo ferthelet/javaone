@@ -11,8 +11,11 @@ public class PrincipalConListas {
 
         // peliculas
         Pelicula miPelicula = new Pelicula("Encanto", 2021);
+        miPelicula.evalua(9);
         Pelicula otraPelicula = new Pelicula("Matrix", 1998);
+        otraPelicula.evalua(6);
         var peliculaDeBruno = new Pelicula("El Senior de los Anillos", 2001);
+        peliculaDeBruno.evalua(10);
 
         // series
         Serie casaDragon = new Serie("La casa del dragon", 2022);
@@ -25,6 +28,13 @@ public class PrincipalConListas {
         lista.add(otraPelicula);
         lista.add(lost);
         lista.add(casaDragon);
+
+        for (Titulo titulo : lista) {
+            System.out.println(titulo);
+            Pelicula pelicula = (Pelicula) titulo;
+            System.out.println(pelicula.getClasificacion());
+            
+        }
         
     }
 
