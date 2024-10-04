@@ -12,16 +12,6 @@ public class Serie extends Titulo {
         super(nombre, fechaDeLanzamiento);
     }
 
-    @Override
-    public String toString() {
-        return "Serie: " + this.getNombre() + " (" + this.getFechaDeLanzamiento() + ")";
-    }
-
-    @Override // mismo metodo existe en la super clase
-    public int getDuracionEnMinutos() {
-        return temporadas * episodiosPorTemporada * minutosPorEpisodio;
-    }
-
     // getters/setters
     public int getTemporadas() {
         return temporadas;
@@ -40,5 +30,19 @@ public class Serie extends Titulo {
     }
     public void setMinutosPorEpisodio(int minutosPorEpisodio) {
         this.minutosPorEpisodio = minutosPorEpisodio;
+    }
+
+    public boolean isActiva() {
+        return activa;
+    }
+
+    @Override // mismo metodo existe en la super clase
+    public int getDuracionEnMinutos() {
+        return temporadas * episodiosPorTemporada * minutosPorEpisodio;
+    }
+
+    @Override
+    public String toString() {
+        return "Serie: " + this.getNombre() + " (" + this.getFechaDeLanzamiento() + ")";
     }
 }

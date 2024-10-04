@@ -16,11 +16,6 @@ public class Titulo implements Comparable<Titulo> {
         this.fechaDeLanzamiento = fechaDeLanzamiento;
     }
 
-    @Override
-    public int compareTo(Titulo otroTitulo) {
-        return this.getNombre().compareTo(otroTitulo.getNombre());
-    }
-
     // getters and setters
     public int getTotalDeEvaluaciones() {
         return totalDeEvaluaciones;
@@ -79,4 +74,8 @@ public class Titulo implements Comparable<Titulo> {
         return sumaDeLasEvaluaciones / totalDeEvaluaciones;
     }
 
+    @Override
+    public int compareTo(Titulo otroTitulo) {
+        return this.getNombre().compareTo(otroTitulo.getNombre());
+    }
 }
