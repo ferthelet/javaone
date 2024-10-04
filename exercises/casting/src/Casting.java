@@ -9,6 +9,11 @@ public class Casting {
 
     public static void doAnimalStuff(Animal animal) {
         animal.makeNoise();
+        // down casting
+        if (animal instanceof Dog) {
+            Dog myDog = (Dog) animal;
+            myDog.growl();
+        }
         // animal.growl(); // won't compile
     }
 
