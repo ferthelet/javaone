@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class App {
@@ -10,6 +11,16 @@ public class App {
         nums.add(1);
         nums.add(4);
         nums.add(2);
+
+        // sort the list
+        // nums.sort(null);
+        // nums.sort((a, b) -> a.compareTo(b));
+        // nums.sort(Integer::compareTo);
+        // nums.sort((a, b) -> {
+        //     return a.compareTo(b);
+        // });
+        // nums.sort(Integer::compareTo);
+        Collections.sort(nums);
 
         System.out.println(nums);
 
