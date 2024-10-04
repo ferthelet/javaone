@@ -4,7 +4,7 @@ public class Casting {
 
         // casting directly
         Animal myAnimal = new Dog();
-        myAnimal.makeNoise();
+        doAnimalStuff(myAnimal);
     }
 
     public static void doAnimalStuff(Animal animal) {
