@@ -5,5 +5,6 @@ public class Casting {
         // casting directly
         Animal myAnimal = new Dog();
         myAnimal.makeNoise();
+        myAnimal.growl();
     }
 }
