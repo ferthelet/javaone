@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Collections;
 
 public class RegistroDeCompras {
     public static void main(String[] args) throws Exception {
@@ -29,19 +30,25 @@ public class RegistroDeCompras {
 
             if (precioCompra <= limiteDeGasto) {
                 System.out.println("Compra realizada!");
-                System.out.println("========================");
+                System.out.println("***********");
                 limiteDeGasto -= precioCompra;
                 compras.add(new Compra(nombreCompra, precioCompra));
             } else {
                 System.out.println("Saldo insuficiente");
-                System.out.println("========================");
+                System.out.println("***********");
             }
-            System.out.printf("Limite restante: %.2f\n", limiteDeGasto);
+            System.out.printf("Limite restante: $%.2f\n", limiteDeGasto);
             System.out.println("Escriba 0 para salir o 1 para continuar");
             String opcion = scanner.nextLine();
             if(opcion.equals("0")) {
                 break;
             }
+        }
+
+        Collections.sort(compras);
+        System.out.println("Compras realizadas:");
+        for (Compra compra : compras) {
+            System.out.println(compra);
         }
     }
 }
