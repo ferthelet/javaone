@@ -5,6 +5,11 @@ public class Casting {
         // casting directly
         Animal myAnimal = new Dog();
         myAnimal.makeNoise();
-        myAnimal.growl();
     }
+
+    public static void doAnimalStuff(Animal animal) {
+        animal.makeNoise();
+        // animal.growl(); // won't compile
+    }
+
 }
