@@ -37,7 +37,7 @@ public class RegistroDeCompras {
 
             System.out.print("Escriba 0 para salir o 1 para continuar: ");
             String choice = scanner.nextLine();
-            if (!choice.equals("0")) {
+            if (choice.equals("0")) {
                 break;
             }
         }
