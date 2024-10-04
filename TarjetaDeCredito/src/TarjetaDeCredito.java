@@ -12,6 +12,15 @@ public class TarjetaDeCredito {
         this.listaDeCompras = new ArrayList<>();
     }
 
+    public boolean lanzarCompra(Compra compra) {
+        if (saldo >= compra.getValor()) {
+            saldo -= compra.getValor();
+            listaDeCompras.add(compra);
+            return true;
+        }
+        return false;
+    }
+
     public double getLimite() {
         return limite;
     }
