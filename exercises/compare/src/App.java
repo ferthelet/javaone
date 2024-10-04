@@ -7,10 +7,10 @@ public class App {
         System.out.println("Hello, Compares!");
 
         List<Integer> nums = new ArrayList<Integer>();
-        nums.add(3);
-        nums.add(1);
-        nums.add(4);
-        nums.add(2);
+        nums.add(23);
+        nums.add(61);
+        nums.add(44);
+        nums.add(27);
 
         // sort the list
         // nums.sort(null);
@@ -19,8 +19,12 @@ public class App {
         // nums.sort((a, b) -> {
         //     return a.compareTo(b);
         // });
-        // nums.sort(Integer::compareTo);
-        Collections.sort(nums);
+        // Collections.sort(nums);
+
+        // sort by the last digit
+        Collections.sort(nums, (a, b) -> {
+            return a % 10 - b % 10;
+        });
 
         System.out.println(nums);
 
