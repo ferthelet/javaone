@@ -64,11 +64,13 @@ class Compra {
     }
 
     // compareTo
+    @Override
     public int compareTo(Compra otraCompra) {
         return Double.compare(this.precio, otraCompra.precio);
     }
 
     // toString
+    @Override
     public String toString() {
         return this.nombre + " - $" + this.precio;
     }
