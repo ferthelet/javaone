@@ -14,8 +14,10 @@ public class RegistroDeCompras {
         Scanner scanner = new Scanner(System.in);
         int limiteDeGasto;
         List<Compra> compras = new ArrayList<>();
-
-                
+        
+        System.out.println("Escriba el limite de la tarjeta:");
+        limiteDeGasto = scanner.nextInt();
+        scanner.nextLine();
 
     }
 }
