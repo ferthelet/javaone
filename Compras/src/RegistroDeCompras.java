@@ -4,66 +4,63 @@ import java.util.Scanner;
 import java.util.Collections;
 
 public class RegistroDeCompras {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         System.out.println("Hello, Lista de Compras!");
         System.out.println("========================");
-
-        // Crear una app para registrar compras en una tarjeta de credito
-        // Menu para registrar compras
-        // Exhibir lista de compras ordenadas ascendente por precio
 
         Scanner scanner = new Scanner(System.in);
         double limiteDeGasto;
         List<Compra> compras = new ArrayList<>();
-        
-        System.out.println("Escriba el limite de la tarjeta:");
-        limiteDeGasto = scanner.nextDouble();
-        scanner.nextLine();
 
-        while(true) {
-            System.out.println("Escriba la descripcion de la compra:");
+        System.out.print("Escriba el limite de la tarjeta: ");
+        limiteDeGasto = scanner.nextDouble();
+        scanner.nextLine(); // Consume newline
+
+        while (true) {
+            System.out.print("Escriba la descripcion de la compra: ");
             String nombreCompra = scanner.nextLine();
 
-            System.out.println("Escriba el precio de la compra:");
+            System.out.print("Escriba el precio de la compra: ");
             double precioCompra = scanner.nextDouble();
-            scanner.nextLine();
+            scanner.nextLine(); // Consume newline
 
             if (precioCompra <= limiteDeGasto) {
                 System.out.println("Compra realizada!");
                 System.out.println("***********");
                 limiteDeGasto -= precioCompra;
                 compras.add(new Compra(nombreCompra, precioCompra));
+                System.out.printf("Limite restante: %.2f\n", limiteDeGasto);
             } else {
-                System.out.println("Saldo insuficiente");
+                System.out.println("Saldo insuficiente.");
                 System.out.println("***********");
             }
-            System.out.printf("Limite restante: $%.2f\n", limiteDeGasto);
-            System.out.println("Escriba 0 para salir o 1 para continuar");
-            String opcion = scanner.nextLine();
-            if(opcion.equals("0")) {
+
+            System.out.print("Escriba 0 para salir o 1 para continuar: ");
+            String choice = scanner.nextLine();
+            if (!choice.equals("0")) {
                 break;
             }
         }
 
         Collections.sort(compras);
-        System.out.println("Compras realizadas:");
+        System.out.println("\nCompras realizadas: ");
         for (Compra compra : compras) {
-            System.out.println(compra);
+            System.out.printf("%s: %.2f\n", compra.nombre, compra.precio);
         }
+
+        scanner.close();
     }
 }
 
-class Compra {
-    private String nombre;
-    private double precio;
+class Compra implements Comparable<Compra> {
+    String nombre;
+    double precio;
 
-    // constructor
-    public Compra(String nombre, double precio) {
+    Compra(String nombre, double precio) {
         this.nombre = nombre;
         this.precio = precio;
     }
 
-    // compareTo
     @Override
     public int compareTo(Compra otraCompra) {
         return Double.compare(this.precio, otraCompra.precio);
