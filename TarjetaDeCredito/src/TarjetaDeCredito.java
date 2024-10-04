@@ -12,9 +12,16 @@ public class TarjetaDeCredito {
         this.listaDeCompras = new ArrayList<>();
     }
 
-    
+    public double getLimite() {
+        return limite;
+    }
 
+    public double getSaldo() {
+        return saldo;
+    }
 
-
+    public List<Compra> getListaDeCompras() {
+        return listaDeCompras;
+    }
 
 }
