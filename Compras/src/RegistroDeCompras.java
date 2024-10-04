@@ -29,12 +29,12 @@ public class RegistroDeCompras {
                 System.out.println("***********");
                 limiteDeGasto -= precioCompra;
                 compras.add(new Compra(nombreCompra, precioCompra));
-                System.out.printf("Limite restante: %.2f\n", limiteDeGasto);
             } else {
                 System.out.println("Saldo insuficiente.");
                 System.out.println("***********");
             }
 
+            System.out.printf("Limite restante: %.2f\n", limiteDeGasto);
             System.out.print("Escriba 0 para salir o 1 para continuar: ");
             String choice = scanner.nextLine();
             if (choice.equals("0")) {
@@ -43,7 +43,7 @@ public class RegistroDeCompras {
         }
 
         Collections.sort(compras);
-        System.out.println("\nCompras realizadas: ");
+        System.out.println("\nCOMPRAS REALIZADAS: ");
         for (Compra compra : compras) {
             System.out.printf("%s: %.2f\n", compra.nombre, compra.precio);
         }
