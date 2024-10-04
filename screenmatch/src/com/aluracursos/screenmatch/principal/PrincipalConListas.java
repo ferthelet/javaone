@@ -45,5 +45,8 @@ public class PrincipalConListas {
         System.out.println("Lista de artistas: " + listaDeArtistas);
         listaDeArtistas.sort(String::compareToIgnoreCase);
         System.out.println("Lista ordenada de artistas: " + listaDeArtistas);
+
+        // despues de compareTo
+        System.out.println("Lista de titulos ordenados: " + lista);
     }
 }
