@@ -3,7 +3,7 @@ public class Casting {
         System.out.println("Hello, Casting!");
 
         // casting directly
-        Animal myAnimal = new Dog();
+        Dog myAnimal = new Dog();
         doAnimalStuff(myAnimal);
     }
 

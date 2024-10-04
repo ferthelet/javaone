@@ -1,7 +1,7 @@
 public class Cat extends Animal {
 
-    public void meow() {
-        System.out.println("Meow meow!");
+    public void hiss() {
+        System.out.println("hisss");
     }
 
     @Override
