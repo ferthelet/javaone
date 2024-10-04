@@ -29,10 +29,18 @@ public class RegistroDeCompras {
 
             if (precioCompra <= limiteDeGasto) {
                 System.out.println("Compra realizada!");
+                System.out.println("========================");
                 limiteDeGasto -= precioCompra;
                 compras.add(new Compra(nombreCompra, precioCompra));
-                System.out.printf("Limite restante: %.2f\n", limiteDeGasto);
+            } else {
+                System.out.println("Saldo insuficiente");
                 System.out.println("========================");
+            }
+            System.out.printf("Limite restante: %.2f\n", limiteDeGasto);
+            System.out.println("Escriba 0 para salir o 1 para continuar");
+            String opcion = scanner.nextLine();
+            if(opcion.equals("0")) {
+                break;
             }
         }
     }
@@ -42,16 +50,20 @@ class Compra {
     private String nombre;
     private double precio;
 
+    // constructor
     public Compra(String nombre, double precio) {
         this.nombre = nombre;
         this.precio = precio;
     }
 
-    public String getNombre() {
-        return nombre;
+    // compareTo
+    public int compareTo(Compra otraCompra) {
+        return Double.compare(this.precio, otraCompra.precio);
     }
 
-    public double getPrecio() {
-        return precio;
+    // toString
+    public String toString() {
+        return this.nombre + " - $" + this.precio;
     }
+
 }
