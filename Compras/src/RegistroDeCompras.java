@@ -12,13 +12,29 @@ public class RegistroDeCompras {
         // Exhibir lista de compras ordenadas ascendente por precio
 
         Scanner scanner = new Scanner(System.in);
-        int limiteDeGasto;
+        double limiteDeGasto;
         List<Compra> compras = new ArrayList<>();
         
         System.out.println("Escriba el limite de la tarjeta:");
-        limiteDeGasto = scanner.nextInt();
+        limiteDeGasto = scanner.nextDouble();
         scanner.nextLine();
 
+        while(true) {
+            System.out.println("Escriba la descripcion de la compra:");
+            String nombreCompra = scanner.nextLine();
+
+            System.out.println("Escriba el precio de la compra:");
+            double precioCompra = scanner.nextDouble();
+            scanner.nextLine();
+
+            if (precioCompra <= limiteDeGasto) {
+                System.out.println("Compra realizada!");
+                limiteDeGasto -= precioCompra;
+                compras.add(new Compra(nombreCompra, precioCompra));
+                System.out.printf("Limite restante: %.2f\n", limiteDeGasto);
+                System.out.println("========================");
+            }
+        }
     }
 }
 
