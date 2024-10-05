@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Principal {
@@ -28,6 +29,9 @@ public class Principal {
             }
         }
         lectura.close();
+
+        Collections.sort(tarjeta.getListaDeCompras()); // hay que implementar Comparable en Compra        
+
         System.out.println("**********");
         System.out.println("Compras realizadas: ");
         for (Compra compra : tarjeta.getListaDeCompras()) {
