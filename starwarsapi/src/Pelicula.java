@@ -5,6 +5,4 @@ public record Pelicula(String title,
                        String director,
                        String producer,
                        String release_date) {
-    
-
 }
