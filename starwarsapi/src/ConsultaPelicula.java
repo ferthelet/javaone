@@ -19,9 +19,9 @@ public class ConsultaPelicula {
         try {
             response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
-        } catch (IOException | InterruptedException e) {
+        } catch (Exception e) {
             // TODO Auto-generated catch block
-            throw new RuntimeException(e);
+            throw new RuntimeException("No encontre la pelicula.");
         }
 
         return new Gson().fromJson(response.body(), Pelicula.class);
