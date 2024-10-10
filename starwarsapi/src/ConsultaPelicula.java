@@ -21,7 +21,7 @@ public class ConsultaPelicula {
                     .send(request, HttpResponse.BodyHandlers.ofString());
         } catch (IOException | InterruptedException e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
         return new Gson().fromJson(response.body(), Pelicula.class);

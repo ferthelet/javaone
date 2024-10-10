@@ -1,6 +1,10 @@
 public class Principal {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+
+        ConsultaPelicula consultaPelicula = new ConsultaPelicula();
+        Pelicula pelicula = consultaPelicula.buscaPelicula(1);
+
+        System.out.println(pelicula);
         
     }
 }
