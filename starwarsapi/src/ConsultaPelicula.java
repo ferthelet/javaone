@@ -15,15 +15,14 @@ public class ConsultaPelicula {
                 .uri(direccionUri)
                 .build();
 
-        HttpResponse<String> response;
         try {
-            response = client
+            HttpResponse<String> response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
+            return new Gson().fromJson(response.body(), Pelicula.class);
         } catch (Exception e) {
             // TODO Auto-generated catch block
             throw new RuntimeException("No encontre la pelicula.");
         }
 
-        return new Gson().fromJson(response.body(), Pelicula.class);
     }
 }
