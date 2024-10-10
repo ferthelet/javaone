@@ -20,7 +20,6 @@ public class ConsultaPelicula {
                     .send(request, HttpResponse.BodyHandlers.ofString());
             return new Gson().fromJson(response.body(), Pelicula.class);
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             throw new RuntimeException("No encontre la pelicula.");
         }
 
